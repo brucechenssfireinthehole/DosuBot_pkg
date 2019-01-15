@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: dosubot_description
+    relative_path: urdf/dosubot.urdf
+    xacro_args: "--inorder "
+  SRDF:
+    relative_path: config/dosubot.srdf
+  CONFIG:
+    author_name: BRUCE CHEN
+    author_email: cbbsjtu@126.com
+    generated_timestamp: 1536761412

@@ -1,0 +1,19 @@
+<launch>
+
+  <arg name="moveit_controller_manager" default="moveit_simple_controller_manager/MoveItSimpleControllerManager"/>
+  <param name="moveit_controller_manager" value="$(arg moveit_controller_manager)"/>
+
+  <arg name="controller_manager_name" default="moveit_simple_controller_manager" />
+  <param name="controller_manager_name" value="$(arg controller_manager_name)" />
+
+  <arg name="use_controller_manager" default="true" />
+  <param name="use_controller_manager" value="$(arg use_controller_manager)" />
+ 
+ <!-- load controller_list -->
+  <rosparam file="$(find moveit_trobo)/config/controllers.yaml"/>
+  
+  <node name="controller_spawner" pkg="controller_manager" 
+        type="spawner" respawn="false"
+	output="screen" ns="/trobo"
+        args="joint_state_controller joint_position_controller"/> 
+</launch>

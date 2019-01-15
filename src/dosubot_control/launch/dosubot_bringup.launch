@@ -1,0 +1,5 @@
+<launch>
+   <include file="$(find dosubot_gazebo)/launch/dosubot_world.launch" />
+   <include file="$(find dosubot_control)/launch/dosubot_control.launch" /> 
+  
+</launch>

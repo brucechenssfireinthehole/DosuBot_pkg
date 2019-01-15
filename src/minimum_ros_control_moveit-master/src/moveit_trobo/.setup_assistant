@@ -1,0 +1,10 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: trobo_description
+    relative_path: urdf/trobo.urdf
+  SRDF:
+    relative_path: config/trobo.srdf
+  CONFIG:
+    author_name: Blue-Crescent
+    author_email: ick40195+ros@gmail.com
+    generated_timestamp: 1490053153

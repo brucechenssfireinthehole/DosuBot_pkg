@@ -1,0 +1,5 @@
+<launch>
+  <node name="trobo_control" pkg="trobo_control" type="trobo_control" 
+        output="screen" ns="/trobo"/>
+
+</launch>

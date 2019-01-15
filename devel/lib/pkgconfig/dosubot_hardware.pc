@@ -1,0 +1,8 @@
+prefix=/home/brucechen/dosubot_ws/devel
+
+Name: dosubot_hardware
+Description: Description of dosubot_hardware
+Version: 0.0.0
+Cflags: -I/home/brucechen/dosubot_ws/src/dosubot_hardware/include
+Libs: -L/home/brucechen/dosubot_ws/devel/lib 
+Requires: roscpp hardware_interface transmission_interface controller_manager

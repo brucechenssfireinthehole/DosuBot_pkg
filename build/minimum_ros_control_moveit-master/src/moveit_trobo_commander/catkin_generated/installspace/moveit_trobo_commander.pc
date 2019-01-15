@@ -1,0 +1,8 @@
+prefix=/home/brucechen/dosubot_ws/install
+
+Name: moveit_trobo_commander
+Description: Description of moveit_trobo_commander
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/brucechen/dosubot_ws/install/lib 
+Requires: 

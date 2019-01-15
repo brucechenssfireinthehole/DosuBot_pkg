@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<package>
+  <name>dosubot_control</name>
+  <version>0.0.0</version>
+  <description>The dosubot_control package</description>
+
+  <maintainer email="cbbsjtu@126.com">Bruce Chen</maintainer>
+
+  <license>BSD</license>
+
+  <url type="website">https://github.com/ros-controls/ros_controllers/wiki</url>
+  <url type="bugtracker">https://github.com/ros-controls/ros_controllers/issues</url>
+  <url type="repository">https://github.com/ros-controls/ros_controllers</url>
+
+  <author>Adolfo Rodriguez Tsouroukdissian</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>controller_manager</build_depend>
+  <build_depend>urdf</build_depend>
+
+  <run_depend>roscpp</run_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>controller_manager</run_depend>
+  <run_depend>joint_state_controller</run_depend>
+  <run_depend>robot_state_publisher</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>rqt_gui</run_depend>
+  <run_depend>effort_controllers</run_depend>
+  <run_depend>urdf</run_depend>
+
+
+  <export>
+  </export>
+
+</package>

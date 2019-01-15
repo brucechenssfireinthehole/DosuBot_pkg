@@ -1,0 +1,35 @@
+<launch>
+  <rosparam>
+    trobo:
+      # Publish all joint states -----------------------------------
+      joint_state_controller:
+        type: joint_state_controller/JointStateController
+        publish_rate: 100
+  
+      # Position Controllers ---------------------------------------
+      joint1_position_controller:
+        type: position_controllers/JointTrajectoryController
+        pid: {p: 10.0, i: 0.0, d: 0.0}
+        joints: 
+          - joint1
+  </rosparam>
+
+  <node name="trobo_control" pkg="trobo_control" type="trobo_control" 
+        output="screen" ns="/trobo"/>
+
+  <node name="controller_spawner" pkg="controller_manager" 
+        type="spawner" respawn="false"
+	output="screen" ns="/trobo" 
+        args="joint_state_controller joint1_position_controller"/> 
+
+  <node name="joint_state_publisher" pkg="joint_state_publisher" 
+	  type="joint_state_publisher" respawn="false" output="screen">
+        <param name="/use_gui" value="false"/>
+	<rosparam param="/source_list">[/trobo/joint_states]</rosparam>
+  </node>
+  <node name="robot_state_publisher" pkg="robot_state_publisher" 
+	  type="robot_state_publisher" respawn="false" output="screen">
+	<remap from="/joint_states" to="/trobo/joint_states" />
+  </node>
+
+</launch>

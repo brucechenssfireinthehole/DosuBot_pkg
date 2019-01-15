@@ -1,0 +1,8 @@
+<launch>
+  <!-- gazeboo -->
+  <include file="$(find minimum_ros_control)/launch/trobo_world.launch" />   
+
+
+  <!-- Load the URDF, SRDF and other .yaml configuration files on the param server -->
+
+</launch>

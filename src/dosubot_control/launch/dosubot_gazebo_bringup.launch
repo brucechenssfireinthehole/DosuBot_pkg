@@ -1,0 +1,17 @@
+<launch>
+ 
+ 
+  <!-- load urdf to Gazebo  -->
+  <include file="$(find dosubot_gazebo)/launch/dosubot_world.launch" />   
+ 
+  <!-- JointStateController and robot state publisher -->
+  <include file="$(find dosubot_control)/launch/dosubot_control.launch" />   
+ 
+  <!-- ros_control TrajectoryController -->
+  <include file="$(find dosubot_control)/launch/dosubot_trajectory_controller.launch" />    
+ 
+  <!-- moveit move group -->
+  <include file="$(find dosubot_moveit_config)/launch/dosubot_moveit_planning_exectution.launch" />    
+ 
+ 
+</launch>

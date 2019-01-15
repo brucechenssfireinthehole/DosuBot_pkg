@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/catkin_ws_trobo/src/minimum_ros_control_moveit/devel
+
+Name: trobo_control
+Description: Description of trobo_control
+Version: 0.0.0
+Cflags: -I/home/ubuntu/catkin_ws_trobo/src/minimum_ros_control_moveit/src/trobo_control/include
+Libs: -L/home/ubuntu/catkin_ws_trobo/src/minimum_ros_control_moveit/devel/lib 
+Requires: roscpp hardware_interface transmission_interface controller_manager

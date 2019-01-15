@@ -1,0 +1,12 @@
+controller_manager_ns: controller_manager
+controller_list:
+  - name: dosubot/arm_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: true
+    joints:
+      - JOINT1
+      - JOINT2
+      - JOINT3
+      - JOINT4
+      - JOINT5

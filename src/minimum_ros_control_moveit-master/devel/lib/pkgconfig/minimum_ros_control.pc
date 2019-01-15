@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/catkin_ws_trobo/src/minimum_ros_control_moveit/devel
+
+Name: minimum_ros_control
+Description: Description of minimum_ros_control
+Version: 0.1.0
+Cflags: 
+Libs: -L/home/ubuntu/catkin_ws_trobo/src/minimum_ros_control_moveit/devel/lib 
+Requires: 

@@ -1,0 +1,105 @@
+<?xml version="1.0" ?>
+<!--This does not replace URDF, and is not an extension of URDF.
+    This is a format for representing semantic information about the robot structure.
+    A URDF file must exist for this robot as well, where the joints and the links that are referenced are defined
+-->
+<robot name="dosubot">
+    <!--GROUPS: Representation of a set of joints and links. This can be useful for specifying DOF to plan for, defining arms, end effectors, etc-->
+    <!--LINKS: When a link is specified, the parent joint of that link (if it exists) is automatically included-->
+    <!--JOINTS: When a joint is specified, the child link of that joint (which will always exist) is automatically included-->
+    <!--CHAINS: When a chain is specified, all the links along the chain (including endpoints) are included in the group. Additionally, all the joints that are parents to included links are also included. This means that joints along the chain and the parent joint of the base link are included in the group-->
+    <!--SUBGROUPS: Groups can also be formed by referencing to already defined group names-->
+    <group name="dosubot">
+        <link name="BASE_LINK" />
+        <link name="LINK1" />
+        <link name="LINK2" />
+        <link name="LINK3" />
+        <link name="LINK4" />
+        <joint name="JOINT1" />
+        <joint name="JOINT2" />
+        <joint name="JOINT3" />
+        <joint name="JOINT4" />
+        <joint name="JOINT5" />
+        <chain base_link="BASE_LINK" tip_link="LINK5" />
+    </group>
+    <group name="leaf">
+        <link name="LINK5" />
+    </group>
+    <!--GROUP STATES: Purpose: Define a named state for a particular group, in terms of joint values. This is useful to define states like 'folded arms'-->
+    <group_state name="original" group="dosubot">
+        <joint name="JOINT1" value="0" />
+        <joint name="JOINT2" value="0" />
+        <joint name="JOINT3" value="0" />
+        <joint name="JOINT4" value="1.1737" />
+        <joint name="JOINT5" value="-0.069" />
+    </group_state>
+    <group_state name="pose_original" group="dosubot">
+        <joint name="JOINT1" value="0.2" />
+        <joint name="JOINT2" value="0.1036" />
+        <joint name="JOINT3" value="1.57" />
+        <joint name="JOINT4" value="1.57" />
+        <joint name="JOINT5" value="-2.38" />
+    </group_state>
+    <group_state name="pose_rotate1" group="dosubot">
+        <joint name="JOINT1" value="-1.3118" />
+        <joint name="JOINT2" value="0.1036" />
+        <joint name="JOINT3" value="1.57" />
+        <joint name="JOINT4" value="1.57" />
+        <joint name="JOINT5" value="-2.38" />
+    </group_state>
+    <group_state name="pose_rotete2" group="dosubot">
+        <joint name="JOINT1" value="-2.865" />
+        <joint name="JOINT2" value="-1.4" />
+        <joint name="JOINT3" value="1.57" />
+        <joint name="JOINT4" value="1.57" />
+        <joint name="JOINT5" value="-2.38" />
+    </group_state>
+    <group_state name="pose_rotote3" group="dosubot">
+        <joint name="JOINT1" value="-2.865" />
+        <joint name="JOINT2" value="0.1036" />
+        <joint name="JOINT3" value="1.07" />
+        <joint name="JOINT4" value="1.57" />
+        <joint name="JOINT5" value="-2.38" />
+    </group_state>
+    <group_state name="pose_fake1" group="dosubot">
+        <joint name="JOINT1" value="0.2417" />
+        <joint name="JOINT2" value="0.1381" />
+        <joint name="JOINT3" value="-1.519" />
+        <joint name="JOINT4" value="1.588" />
+        <joint name="JOINT5" value="0.4488" />
+    </group_state>
+    <group_state name="pose_fake2" group="dosubot">
+        <joint name="JOINT1" value="1.67" />
+        <joint name="JOINT2" value="0.1381" />
+        <joint name="JOINT3" value="-1.519" />
+        <joint name="JOINT4" value="1.588" />
+        <joint name="JOINT5" value="0.4488" />
+    </group_state>
+    <group_state name="pose_fake3" group="dosubot">
+        <joint name="JOINT1" value="0.2417" />
+        <joint name="JOINT2" value="-1.4" />
+        <joint name="JOINT3" value="-1.519" />
+        <joint name="JOINT4" value="1.588" />
+        <joint name="JOINT5" value="0.4488" />
+    </group_state>
+    <group_state name="pose_fake4" group="dosubot">
+        <joint name="JOINT1" value="0.2417" />
+        <joint name="JOINT2" value="0.1381" />
+        <joint name="JOINT3" value="-0.7518" />
+        <joint name="JOINT4" value="1.588" />
+        <joint name="JOINT5" value="0.4488" />
+    </group_state>
+    <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
+    <end_effector name="endeffector" parent_link="LINK5" group="leaf" parent_group="dosubot" />
+    <!--VIRTUAL JOINT: Purpose: this element defines a virtual joint between a robot link and an external frame of reference (considered fixed with respect to the robot)-->
+    <virtual_joint name="fixed_world" type="fixed" parent_frame="fixed world" child_link="world" />
+    <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
+    <disable_collisions link1="BASE_LINK" link2="LINK1" reason="Adjacent" />
+    <disable_collisions link1="BASE_LINK" link2="LINK4" reason="Never" />
+    <disable_collisions link1="LINK1" link2="LINK2" reason="Adjacent" />
+    <disable_collisions link1="LINK1" link2="LINK4" reason="Never" />
+    <disable_collisions link1="LINK2" link2="LINK3" reason="Adjacent" />
+    <disable_collisions link1="LINK2" link2="LINK4" reason="Never" />
+    <disable_collisions link1="LINK3" link2="LINK4" reason="Adjacent" />
+    <disable_collisions link1="LINK4" link2="LINK5" reason="Adjacent" />
+</robot>

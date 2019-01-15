@@ -1,0 +1,8 @@
+prefix=/home/brucechen/dosubot_ws/install
+
+Name: minimum_ros_control
+Description: Description of minimum_ros_control
+Version: 0.1.0
+Cflags: 
+Libs: -L/home/brucechen/dosubot_ws/install/lib 
+Requires: 

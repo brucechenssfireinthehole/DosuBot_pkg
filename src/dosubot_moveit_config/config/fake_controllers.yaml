@@ -1,0 +1,11 @@
+controller_list:
+  - name: fake_dosubot_controller
+    joints:
+      - JOINT1
+      - JOINT2
+      - JOINT3
+      - JOINT4
+      - JOINT5
+  - name: fake_leaf_controller
+    joints:
+      - JOINT5

@@ -1,0 +1,17 @@
+dosubot:
+  dosubot_joint_controller:
+    type: "position_controllers/JointTrajectoryController"
+    joints:
+      - JOINT1
+      - JOINT2
+      - JOINT3
+      - JOINT4
+      - JOINT5
+
+    gains:
+      JOINT1:   {p: 1000.0, i: 0.0, d: 0.1, i_clamp: 0.0}
+      JOINT2: {p: 1000.0, i: 0.0, d: 0.1, i_clamp: 0.0}
+      JOINT3:  {p: 1000.0, i: 0.0, d: 0.1, i_clamp: 0.0}
+      JOINT4:       {p: 1000.0, i: 0.0, d: 0.1, i_clamp: 0.0}
+      JOINT5:    {p: 1000.0, i: 0.0, d: 0.1, i_clamp: 0.0}
+   

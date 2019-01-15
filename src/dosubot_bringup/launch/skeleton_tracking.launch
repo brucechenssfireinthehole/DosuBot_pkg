@@ -1,0 +1,7 @@
+<launch>
+
+   <node name="skeleton" pkg="skeleton" type="skeleton" output="screen" />
+<node name="skeleton_send_node" pkg="skeleton_send_node" type="skeleton_send_node" output="screen" />
+<node name="xm_arm_hardware_serial_node" pkg="xm_arm_hardware_serial_node" type="xm_arm_hardware_serial_node" output="screen" />
+
+</launch>
