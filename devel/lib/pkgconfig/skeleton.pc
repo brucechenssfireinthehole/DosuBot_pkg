@@ -1,8 +1,0 @@
-prefix=/home/brucechen/dosubot_ws/devel
-
-Name: skeleton
-Description: Description of skeleton
-Version: 0.0.0
-Cflags: -I/home/brucechen/dosubot_ws/devel/include
-Libs: -L/home/brucechen/dosubot_ws/devel/lib 
-Requires: message_runtime

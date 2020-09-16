@@ -1,8 +1,0 @@
-prefix=/home/brucechen/dosubot_ws/devel
-
-Name: xm_arm_msgs
-Description: Description of xm_arm_msgs
-Version: 0.0.1
-Cflags: -I/home/brucechen/dosubot_ws/devel/include
-Libs: -L/home/brucechen/dosubot_ws/devel/lib 
-Requires: message_runtime

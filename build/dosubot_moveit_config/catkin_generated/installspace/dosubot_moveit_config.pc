@@ -1,8 +1,0 @@
-prefix=/home/brucechen/dosubot_ws/install
-
-Name: dosubot_moveit_config
-Description: Description of dosubot_moveit_config
-Version: 0.3.0
-Cflags: 
-Libs: -L/home/brucechen/dosubot_ws/install/lib 
-Requires: 

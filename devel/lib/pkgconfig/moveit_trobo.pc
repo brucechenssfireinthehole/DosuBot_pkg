@@ -1,8 +1,0 @@
-prefix=/home/brucechen/dosubot_ws/devel
-
-Name: moveit_trobo
-Description: Description of moveit_trobo
-Version: 0.3.0
-Cflags: 
-Libs: -L/home/brucechen/dosubot_ws/devel/lib 
-Requires: 

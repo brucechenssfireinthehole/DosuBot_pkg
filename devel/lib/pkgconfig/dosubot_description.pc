@@ -1,8 +1,0 @@
-prefix=/home/brucechen/dosubot_ws/devel
-
-Name: dosubot_description
-Description: Description of dosubot_description
-Version: 1.0.0
-Cflags: 
-Libs: -L/home/brucechen/dosubot_ws/devel/lib 
-Requires: 

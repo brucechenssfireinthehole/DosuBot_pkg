@@ -1,8 +1,0 @@
-prefix=/home/brucechen/dosubot_ws/devel
-
-Name: trobo_control
-Description: Description of trobo_control
-Version: 0.0.0
-Cflags: -I/home/brucechen/dosubot_ws/src/minimum_ros_control_moveit-master/src/trobo_control/include
-Libs: -L/home/brucechen/dosubot_ws/devel/lib 
-Requires: roscpp hardware_interface transmission_interface controller_manager

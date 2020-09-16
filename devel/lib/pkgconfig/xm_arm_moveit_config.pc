@@ -1,8 +1,0 @@
-prefix=/home/brucechen/dosubot_ws/devel
-
-Name: xm_arm_moveit_config
-Description: Description of xm_arm_moveit_config
-Version: 0.2.0
-Cflags: 
-Libs: -L/home/brucechen/dosubot_ws/devel/lib 
-Requires: 

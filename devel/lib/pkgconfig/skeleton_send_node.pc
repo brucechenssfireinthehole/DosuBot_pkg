@@ -1,8 +1,0 @@
-prefix=/home/brucechen/dosubot_ws/devel
-
-Name: skeleton_send_node
-Description: Description of skeleton_send_node
-Version: 0.0.0
-Cflags: -I/home/brucechen/dosubot_ws/src/skeleton_send_node/include
-Libs: -L/home/brucechen/dosubot_ws/devel/lib 
-Requires: roscpp

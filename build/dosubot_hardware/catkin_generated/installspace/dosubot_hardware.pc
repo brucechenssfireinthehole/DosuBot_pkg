@@ -1,8 +1,0 @@
-prefix=/home/brucechen/dosubot_ws/install
-
-Name: dosubot_hardware
-Description: Description of dosubot_hardware
-Version: 0.0.0
-Cflags: -I/home/brucechen/dosubot_ws/install/include
-Libs: -L/home/brucechen/dosubot_ws/install/lib 
-Requires: roscpp hardware_interface transmission_interface controller_manager
